@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxus Taxi Karlsruhe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <div class="logo-block">
+        <a href="#" class="logo">
+          <img src="assets/logo-icon-crown-horse.png" alt="Luxus Taxi Logo" class="logo-icon">
+          <span>Luxus Taxi</span>
+        </a>
+        <a href="tel:+491774913221" class="logo-phone">+49 177 49 13 221</a>
+      </div>
+      <div class="nav-links">
+        <a href="#flotte">Flotte</a>
+        <a href="#leistungen">Leistungen</a>
+        <a href="#feste-fahrten">Feste Fahrten</a>
+        <a href="#ueber-uns">Über uns</a>
+      </div>
+      <div class="nav-actions">
+        <a href="tel:+491774913221" class="btn btn-ghost">Jetzt anrufen</a>
+        <a href="#kontakt" class="btn btn-primary">Fahrt buchen</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="progress-track">
+    <div class="progress-marker"></div>
+  </div>
+
+  <section class="hero">
+    <canvas id="bg-canvas"></canvas>
+    <div class="hero-title">
+      <canvas class="hero-crown" id="hero-crown"></canvas>
+      <h1>
+        <span class="line line-1" data-text="Luxus"></span>
+        <span class="line line-2" data-text="Taxi"></span>
+      </h1>
+    </div>
+    <div class="scroll-hint">
+      <span class="scroll-hint-text">Scrollen</span>
+      <svg class="scroll-hint-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 8 L12 15 L19 8" stroke="#c9a54a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="fleet" id="flotte">
+    <div class="fleet-inner">
+      <h2 class="fleet-heading">Unsere Flotte</h2>
+      <div class="fleet-underline" id="fleet-underline"></div>
+      <p class="fleet-intro">Ob Sie morgens als Erster einsteigen oder abends als Letzter: Unsere Fahrzeuge sind immer frisch gereinigt, gepflegt und einsatzbereit für jede Fahrt wie neu.</p>
+
+      <div class="fleet-grid">
+        <div class="fleet-card reveal-card">
+          <div class="fleet-card-image">
+            <img src="assets/fleet-car-eklasse-tmodell.png" alt="Mercedes E-Klasse T-Modell">
+          </div>
+          <div class="fleet-card-icon">01</div>
+          <h3>Mercedes E-Klasse T-Modell</h3>
+          <p>Unser Flaggschiff für Geschäftsreisen und Flughafentransfers  leise, geräumig, immer gepflegt.</p>
+        </div>
+
+        <div class="fleet-card reveal-card">
+          <div class="fleet-card-image">
+            <img src="assets/fleet-car-eklasse-limousine.png" alt="Mercedes E-Klasse Limousine">
+          </div>
+          <div class="fleet-card-icon">02</div>
+          <h3>Mercedes E-Klasse Limousine</h3>
+          <p>Für besondere Anlässe und Gäste, die den letzten Komfort erwarten.</p>
+        </div>
+
+        <div class="fleet-card reveal-card">
+          <div class="fleet-card-image">
+            <img src="assets/fleet-car-caddy.png" alt="Volkswagen Caddy">
+          </div>
+          <div class="fleet-card-icon">03</div>
+          <h3>Volkswagen Caddy</h3>
+          <p>Platz für Gruppen und Familien, mit Gepäckraum für längere Fahrten. Außerdem ist das Fahrzeug auch für Rollstuhlfahrten optimiert.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="leistungen">
+    <div class="services-inner">
+      <h2 class="services-heading">Unsere Leistungen</h2>
+      <p class="services-area">Wir bieten unsere Leistungen in Karlsruhe und Bruchsal an.</p>
+      <div class="services-underline"></div>
+
+      <div class="services-grid">
+        <a href="#kontakt" class="service-card" data-service="Flughafentransfer">
+          <svg class="service-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 4 L24 18 L41 27 L41 30.5 L24 25.5 L24 33 L29.5 37 L29.5 39.5 L24 37.5 L18.5 39.5 L18.5 37 L24 33 L24 25.5 L7 30.5 L7 27 L24 18 Z" stroke="#c9a54a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+          </svg>
+          <h3>Flughafentransfer</h3>
+          <p>Zuverlässiger Transfer von und zu allen Flughäfen der Region, mit Flugüberwachung bei Verspätungen.</p>
+        </a>
+
+        <a href="#kontakt" class="service-card" data-service="Geschäftsreise">
+          <svg class="service-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="16" width="32" height="22" rx="2" stroke="#15161a" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M17 16 V12 Q17 9 20 9 H28 Q31 9 31 12 V16" stroke="#c9a54a" stroke-width="2.5" stroke-linejoin="round"/>
+            <line x1="8" y1="26" x2="40" y2="26" stroke="#15161a" stroke-width="2"/>
+            <line x1="22" y1="23" x2="26" y2="23" stroke="#c9a54a" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <h3>Geschäftsreisen</h3>
+          <p>Diskrete, pünktliche Fahrten zu Terminen und Meetings — deutschlandweit auf Anfrage.</p>
+        </a>
+
+        <a href="#kontakt" class="service-card" data-service="Krankenfahrt">
+          <svg class="service-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="17" stroke="#15161a" stroke-width="2.5"/>
+            <path d="M24 15 V33 M15 24 H33" stroke="#c9a54a" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <h3>Krankenfahrten</h3>
+          <p>Fahrten zu Arztterminen und Kliniken, mit Ruhe und Rücksicht. Auch für Rollstuhlpatienten geeignet.</p>
+        </a>
+
+        <a href="#kontakt" class="service-card" data-service="Sonderfahrt">
+          <svg class="service-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 6 L28 18 L40 18 L30 25 L34 38 L24 30 L14 38 L18 25 L8 18 L20 18 Z" stroke="#c9a54a" stroke-width="2.5" stroke-linejoin="round"/>
+          </svg>
+          <h3>Sonderfahrten</h3>
+          <p>Hochzeiten, Feiern und besondere Momente — stilvoll unterwegs.</p>
+        </a>
+
+        <a href="#kontakt" class="service-card" data-service="Kurz- oder Rehafahrt">
+          <svg class="service-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="27" r="15" stroke="#15161a" stroke-width="2.5"/>
+            <path d="M24 27 V18 M24 27 L30 31" stroke="#c9a54a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="19" y1="6" x2="29" y2="6" stroke="#15161a" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="24" y1="6" x2="24" y2="10" stroke="#15161a" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <h3>Kurz- und Rehafahrten</h3>
+          <p>Schnelle Kurzstrecken sowie regelmäßige Fahrten zu Reha-Einrichtungen und Therapien.</p>
+        </a>
+
+        <a href="#kontakt" class="service-card" data-service="Kurierfahrt">
+          <svg class="service-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 16 L24 8 L40 16 L40 34 L24 42 L8 34 Z" stroke="#15161a" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M8 16 L24 24 L40 16" stroke="#15161a" stroke-width="2.5" stroke-linejoin="round"/>
+            <line x1="24" y1="24" x2="24" y2="42" stroke="#15161a" stroke-width="2.5"/>
+            <path d="M15 12 L33 20" stroke="#c9a54a" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <h3>Kurierfahrten</h3>
+          <p>Schnelle und zuverlässige Zustellung von Dokumenten und Paketen — pünktlich am Ziel.</p>
+        </a>
+
+        <a href="#kontakt" class="service-card" data-service="Landfahrt">
+          <svg class="service-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 42 L21 6 M32 42 L27 6" stroke="#15161a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="24" y1="9" x2="24" y2="15" stroke="#c9a54a" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="24" y1="20" x2="24" y2="26" stroke="#c9a54a" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="24" y1="31" x2="24" y2="37" stroke="#c9a54a" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="9" cy="33" r="4.5" stroke="#15161a" stroke-width="2"/>
+            <line x1="9" y1="37.5" x2="9" y2="43" stroke="#15161a" stroke-width="2"/>
+          </svg>
+          <h3>Landfahrten</h3>
+          <p>Fahrten in die umliegenden Ortschaften und ländlichen Regionen — zuverlässig auch abseits der Stadt.</p>
+        </a>
+      </div>
+      <p class="services-hint">Klicke auf eine Leistung — wir tragen sie direkt im Buchungsformular für dich ein.</p>
+    </div>
+  </section>
+
+  <section class="fixed-rides" id="feste-fahrten">
+    <div class="fixed-rides-inner">
+      <h2 class="fixed-rides-heading">Feste Fahrten</h2>
+      <div class="fixed-rides-underline"></div>
+      <p class="fixed-rides-intro">Feste Strecken zu festen Preisen — einfach auswählen, wir tragen Start und Ziel direkt im Formular ein.</p>
+
+      <div class="route-list">
+        <a href="#kontakt" class="route-btn" data-von="Bruchsal" data-nach="Frankfurt Flughafen" data-price="ab 260 €">
+          <span class="route-btn-cities">Bruchsal <span class="route-arrow">→</span> Frankfurt Flughafen</span>
+          <span class="route-btn-price">ab 260 €</span>
+        </a>
+
+        <a href="#kontakt" class="route-btn" data-von="Karlsruhe" data-nach="Frankfurt Flughafen" data-price="ab 290 €">
+          <span class="route-btn-cities">Karlsruhe <span class="route-arrow">→</span> Frankfurt Flughafen</span>
+          <span class="route-btn-price">ab 290 €</span>
+        </a>
+
+        <a href="#kontakt" class="route-btn" data-von="Bruchsal" data-nach="Stuttgart" data-price="ab 210 €">
+          <span class="route-btn-cities">Bruchsal <span class="route-arrow">→</span> Stuttgart</span>
+          <span class="route-btn-price">ab 210 €</span>
+        </a>
+
+        <a href="#kontakt" class="route-btn" data-von="Karlsruhe" data-nach="Stuttgart" data-price="ab 200 €">
+          <span class="route-btn-cities">Karlsruhe <span class="route-arrow">→</span> Stuttgart</span>
+          <span class="route-btn-price">ab 200 €</span>
+        </a>
+
+        <a href="#kontakt" class="route-btn" data-von="Bruchsal" data-nach="Heidelberg" data-price="ab 100 €">
+          <span class="route-btn-cities">Bruchsal <span class="route-arrow">→</span> Heidelberg</span>
+          <span class="route-btn-price">ab 100 €</span>
+        </a>
+
+        <a href="#kontakt" class="route-btn" data-von="Karlsruhe" data-nach="Heidelberg" data-price="ab 150 €">
+          <span class="route-btn-cities">Karlsruhe <span class="route-arrow">→</span> Heidelberg</span>
+          <span class="route-btn-price">ab 150 €</span>
+        </a>
+
+        <a href="#kontakt" class="route-btn" data-von="Karlsruhe" data-nach="Bruchsal" data-price="ab 80 €">
+          <span class="route-btn-cities">Karlsruhe <span class="route-arrow">↔</span> Bruchsal</span>
+          <span class="route-btn-price">ab 80 €</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="ueber-uns">
+    <div class="about-inner">
+      <h2 class="about-heading">Über uns</h2>
+      <div class="about-underline"></div>
+      <p class="about-text">Luxus Taxi ist ein zuverlässiger Taxiservice mit Sitz in Karlsruhe, geführt von Inhaber Zaher Ahmed Waraich. Wir bringen unsere Kunden sicher, pünktlich und komfortabel an ihr Ziel – ob zum Flughafen, zu geschäftlichen Terminen oder für private Fahrten in der Region und darüber hinaus. Persönlicher Service und Zuverlässigkeit stehen für uns an erster Stelle. Wir freuen uns darauf, auch Sie bald als Fahrgast begrüßen zu dürfen.</p>
+
+      <div class="about-stats">
+        <div class="stat-item">
+          <span class="stat-number" data-target="800000" data-suffix="+">0</span>
+          <span class="stat-label">Kilometer gefahren</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="2022" data-plain="true">0</span>
+          <span class="stat-label">Gegründet</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="4">0</span>
+          <span class="stat-label">Fahrzeuge</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking" id="kontakt">
+    <div class="booking-inner">
+      <h2 class="booking-heading">Fahrt buchen</h2>
+      <div class="booking-underline"></div>
+      <p class="booking-intro">Trage Start, Ziel, Datum, Uhrzeit und Art deiner Fahrt ein — wir melden uns schnellstmöglich bei dir zurück.</p>
+
+      <form class="booking-form" id="booking-form" action="https://formspree.io/f/myeyranw" method="POST">
+        <input type="hidden" name="_subject" value="Neue Fahrtbuchung – Luxus Taxi">
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="booking-name">Name</label>
+            <input type="text" id="booking-name" name="Name" required>
+          </div>
+          <div class="form-field">
+            <label for="booking-contact">Telefon oder E-Mail</label>
+            <input type="text" id="booking-contact" name="_replyto" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="booking-von">Von</label>
+            <input type="text" id="booking-von" name="Von" placeholder="z.B. Karlsruhe">
+          </div>
+          <div class="form-field">
+            <label for="booking-nach">Nach</label>
+            <input type="text" id="booking-nach" name="Nach" placeholder="z.B. Frankfurt Flughafen">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="booking-date">Datum</label>
+            <input type="date" id="booking-date" name="Datum" required>
+          </div>
+          <div class="form-field">
+            <label for="booking-time">Uhrzeit</label>
+            <input type="time" id="booking-time" name="Uhrzeit" required>
+          </div>
+        </div>
+
+        <div class="form-field form-field-full">
+          <label for="booking-ride">Art der Fahrt</label>
+          <textarea id="booking-ride" name="Art der Fahrt" rows="4" placeholder="z.B. Flughafentransfer vom Hotel X zum Flughafen Karlsruhe/Baden-Baden, 2 Personen mit Gepäck" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary booking-submit">Anfrage senden</button>
+        <p class="booking-status" id="booking-status"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo-full.png" alt="Luxus Taxi Logo" class="footer-logo">
+      </div>
+
+      <div class="footer-contact">
+        <p>Auf der Briet 9b<br>76227 Karlsruhe</p>
+        <p><a href="tel:+491774913221">+49 177 49 13 221</a></p>
+        <p><a href="mailto:luxus.zaheer2022@gmail.com">luxus.zaheer2022@gmail.com</a></p>
+      </div>
+
+      <div class="footer-legal">
+        <p>&copy; <span id="footer-year"></span> Luxus Taxi. Alle Rechte vorbehalten.</p>
+        <div class="footer-links">
+          <a href="impressum.html">Impressum</a>
+          <span class="footer-dot">·</span>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
