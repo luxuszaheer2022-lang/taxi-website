@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Fahrt buchen – Luxus Taxi Karlsruhe</title>
+  <meta name="description" content="Taxi in Karlsruhe und Bruchsal buchen: Flughafentransfer, feste Strecken, Kranken- und Geschäftsfahrten. In wenigen Schritten angefragt.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="booking.css">
+</head>
+<body class="bk">
+
+  <aside class="bk-aside">
+    <a href="index.html" class="bk-logo" aria-label="Zur Startseite">
+      <img src="assets/logo-full-transparent.png" alt="Luxus Taxi">
+    </a>
+
+    <ol class="bk-steps" aria-label="Fortschritt">
+      <li data-goto="1"><span class="bk-step-num">1</span><span>Art der Fahrt</span></li>
+      <li data-goto="2"><span class="bk-step-num">2</span><span>Strecke</span></li>
+      <li data-goto="3"><span class="bk-step-num">3</span><span>Termin</span></li>
+      <li data-goto="4"><span class="bk-step-num">4</span><span>Kontakt</span></li>
+      <li data-goto="5"><span class="bk-step-num">5</span><span>Prüfen &amp; senden</span></li>
+    </ol>
+
+    <div class="bk-aside-foot">
+      <p>Lieber persönlich?</p>
+      <a href="tel:+491774913221">+49 177 49 13 221</a>
+    </div>
+  </aside>
+
+  <main class="bk-main">
+    <header class="bk-top">
+      <a href="index.html" class="bk-logo bk-logo-mobile" aria-label="Zur Startseite">
+        <img src="assets/logo-full-transparent.png" alt="Luxus Taxi">
+      </a>
+      <p class="bk-counter" id="bk-counter" aria-live="polite">Schritt 1 von 5</p>
+      <a href="index.html" class="bk-close" aria-label="Buchung schließen">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </a>
+      <div class="bk-progress" aria-hidden="true"><span id="bk-progress-bar"></span></div>
+    </header>
+
+    <form class="bk-form" id="bk-form" action="https://formspree.io/f/myeyranw" method="POST" novalidate>
+      <input type="hidden" name="_subject" value="Neue Fahrtbuchung – Luxus Taxi">
+      <input type="hidden" name="Feste Strecke" id="f-route">
+
+      <div class="bk-stage">
+
+        <!-- Schritt 1 -->
+        <section class="bk-step" data-step="1" aria-labelledby="t1">
+          <h1 class="bk-title" id="t1">Welche Fahrt dürfen wir für Sie übernehmen?</h1>
+          <div class="choice-grid">
+            <label class="choice">
+              <input type="radio" name="Art der Fahrt" value="Flughafentransfer" required>
+              <span class="choice-box">
+                <svg class="choice-icon" aria-hidden="true" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 4 L24 18 L41 27 L41 30.5 L24 25.5 L24 33 L29.5 37 L29.5 39.5 L24 37.5 L18.5 39.5 L18.5 37 L24 33 L24 25.5 L7 30.5 L7 27 L24 18 Z" stroke="#c9a54a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+          </svg>
+                <span class="choice-text"><strong>Flughafentransfer</strong><small>Mit Flugüberwachung</small></span>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="Art der Fahrt" value="Feste Strecke" required>
+              <span class="choice-box">
+                <svg class="choice-icon" aria-hidden="true" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="36" r="4.5" stroke="#15161a" stroke-width="2.5"/><circle cx="37" cy="12" r="4.5" stroke="#c9a54a" stroke-width="2.5"/><path d="M15 34 C 26 30, 20 18, 33 14" stroke="#15161a" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3 4"/></svg>
+                <span class="choice-text"><strong>Feste Strecke</strong><small>Zum Festpreis</small></span>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="Art der Fahrt" value="Geschäftsreise" required>
+              <span class="choice-box">
+                <svg class="choice-icon" aria-hidden="true" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="16" width="32" height="22" rx="2" stroke="#15161a" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M17 16 V12 Q17 9 20 9 H28 Q31 9 31 12 V16" stroke="#c9a54a" stroke-width="2.5" stroke-linejoin="round"/>
+            <line x1="8" y1="26" x2="40" y2="26" stroke="#15161a" stroke-width="2"/>
+            <line x1="22" y1="23" x2="26" y2="23" stroke="#c9a54a" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+                <span class="choice-text"><strong>Geschäftsreise</strong><small>Diskret und pünktlich</small></span>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="Art der Fahrt" value="Krankenfahrt" required>
+              <span class="choice-box">
+                <svg class="choice-icon" aria-hidden="true" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="17" stroke="#15161a" stroke-width="2.5"/>
+            <path d="M24 15 V33 M15 24 H33" stroke="#c9a54a" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+                <span class="choice-text"><strong>Krankenfahrt</strong><small>Auch mit Rollstuhl</small></span>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="Art der Fahrt" value="Sonderfahrt" required>
+              <span class="choice-box">
+                <svg class="choice-icon" aria-hidden="true" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 6 L28 18 L40 18 L30 25 L34 38 L24 30 L14 38 L18 25 L8 18 L20 18 Z" stroke="#c9a54a" stroke-width="2.5" stroke-linejoin="round"/>
+          </svg>
+                <span class="choice-text"><strong>Sonderfahrt</strong><small>Hochzeiten und Feiern</small></span>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="Art der Fahrt" value="Kurz- oder Rehafahrt" required>
+              <span class="choice-box">
+                <svg class="choice-icon" aria-hidden="true" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="27" r="15" stroke="#15161a" stroke-width="2.5"/>
+            <path d="M24 27 V18 M24 27 L30 31" stroke="#c9a54a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="19" y1="6" x2="29" y2="6" stroke="#15161a" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="24" y1="6" x2="24" y2="10" stroke="#15161a" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+                <span class="choice-text"><strong>Kurz- oder Rehafahrt</strong><small>Kurzstrecke, Therapie</small></span>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="Art der Fahrt" value="Kurierfahrt" required>
+              <span class="choice-box">
+                <svg class="choice-icon" aria-hidden="true" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 16 L24 8 L40 16 L40 34 L24 42 L8 34 Z" stroke="#15161a" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M8 16 L24 24 L40 16" stroke="#15161a" stroke-width="2.5" stroke-linejoin="round"/>
+            <line x1="24" y1="24" x2="24" y2="42" stroke="#15161a" stroke-width="2.5"/>
+            <path d="M15 12 L33 20" stroke="#c9a54a" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+                <span class="choice-text"><strong>Kurierfahrt</strong><small>Dokumente und Pakete</small></span>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="Art der Fahrt" value="Landfahrt" required>
+              <span class="choice-box">
+                <svg class="choice-icon" aria-hidden="true" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 42 L21 6 M32 42 L27 6" stroke="#15161a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="24" y1="9" x2="24" y2="15" stroke="#c9a54a" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="24" y1="20" x2="24" y2="26" stroke="#c9a54a" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="24" y1="31" x2="24" y2="37" stroke="#c9a54a" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="9" cy="33" r="4.5" stroke="#15161a" stroke-width="2"/>
+            <line x1="9" y1="37.5" x2="9" y2="43" stroke="#15161a" stroke-width="2"/>
+          </svg>
+                <span class="choice-text"><strong>Landfahrt</strong><small>Abseits der Stadt</small></span>
+              </span>
+            </label>
+          </div>
+          <p class="bk-error" data-error="Art der Fahrt"></p>
+        </section>
+
+        <!-- Schritt 2 -->
+        <section class="bk-step" data-step="2" aria-labelledby="t2" hidden>
+          <h1 class="bk-title" id="t2">Wohin geht die Fahrt?</h1>
+
+          <div class="bk-routes" id="bk-routes" hidden>
+            <p class="bk-label">Feste Strecke wählen</p>
+            <div class="bk-route-chips" id="bk-route-chips"></div>
+          </div>
+
+          <div class="bk-fromto">
+            <div class="bk-field">
+              <label for="f-von">Abholort</label>
+              <input type="text" id="f-von" name="Von" placeholder="Straße, Hausnummer, Ort" autocomplete="street-address" required>
+              <p class="bk-error" data-error="Von"></p>
+            </div>
+            <button type="button" class="bk-swap" id="bk-swap" aria-label="Abholort und Ziel tauschen">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16M7 4L3.5 7.5M7 4l3.5 3.5M17 20V4m0 16l-3.5-3.5M17 20l3.5-3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            </button>
+            <div class="bk-field">
+              <label for="f-nach">Ziel</label>
+              <input type="text" id="f-nach" name="Nach" placeholder="Adresse, Flughafen oder Ort" required>
+              <p class="bk-error" data-error="Nach"></p>
+            </div>
+          </div>
+          <p class="bk-route-price" id="bk-route-price" hidden></p>
+        </section>
+
+        <!-- Schritt 3 -->
+        <section class="bk-step" data-step="3" aria-labelledby="t3" hidden>
+          <h1 class="bk-title" id="t3">Wann sollen wir Sie abholen?</h1>
+
+          <div class="bk-quick" role="group" aria-label="Schnellauswahl Datum">
+            <button type="button" class="bk-chip" data-day="0">Heute</button>
+            <button type="button" class="bk-chip" data-day="1">Morgen</button>
+            <button type="button" class="bk-chip" data-day="2">Übermorgen</button>
+          </div>
+
+          <div class="bk-row">
+            <div class="bk-field">
+              <label for="f-datum">Datum</label>
+              <input type="date" id="f-datum" name="Datum" required>
+              <p class="bk-error" data-error="Datum"></p>
+            </div>
+            <div class="bk-field">
+              <label for="f-zeit">Uhrzeit</label>
+              <input type="time" id="f-zeit" name="Uhrzeit" step="300" required>
+              <p class="bk-error" data-error="Uhrzeit"></p>
+            </div>
+          </div>
+
+          <div class="bk-row">
+            <div class="bk-field">
+              <span class="bk-label" id="l-personen">Personen</span>
+              <div class="bk-stepper" role="group" aria-labelledby="l-personen">
+                <button type="button" data-step-by="-1" aria-label="Eine Person weniger">−</button>
+                <input type="number" id="f-personen" name="Personen" value="1" min="1" max="8" inputmode="numeric" aria-labelledby="l-personen">
+                <button type="button" data-step-by="1" aria-label="Eine Person mehr">+</button>
+              </div>
+            </div>
+            <div class="bk-field">
+              <span class="bk-label">Besonderes</span>
+              <label class="bk-toggle">
+                <input type="checkbox" name="Rollstuhl" value="Ja">
+                <span class="bk-toggle-ui" aria-hidden="true"></span>
+                <span>Rollstuhl wird mitgenommen</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bk-field" id="bk-flight" hidden>
+            <label for="f-flug">Flugnummer <span class="bk-opt">optional</span></label>
+            <input type="text" id="f-flug" name="Flugnummer" placeholder="z. B. LH 123" autocomplete="off">
+          </div>
+        </section>
+
+        <!-- Schritt 4 -->
+        <section class="bk-step" data-step="4" aria-labelledby="t4" hidden>
+          <h1 class="bk-title" id="t4">Wie erreichen wir Sie?</h1>
+          <div class="bk-row">
+            <div class="bk-field">
+              <label for="f-name">Name</label>
+              <input type="text" id="f-name" name="Name" autocomplete="name" required>
+              <p class="bk-error" data-error="Name"></p>
+            </div>
+            <div class="bk-field">
+              <label for="f-tel">Telefon</label>
+              <input type="tel" id="f-tel" name="Telefon" autocomplete="tel" inputmode="tel" required>
+              <p class="bk-error" data-error="Telefon"></p>
+            </div>
+          </div>
+          <div class="bk-field">
+            <label for="f-mail">E-Mail <span class="bk-opt">optional, für die Bestätigung</span></label>
+            <input type="email" id="f-mail" name="email" autocomplete="email">
+            <p class="bk-error" data-error="email"></p>
+          </div>
+          <div class="bk-field">
+            <label for="f-notiz">Anmerkungen <span class="bk-opt">optional</span></label>
+            <textarea id="f-notiz" name="Anmerkungen" rows="3" placeholder="z. B. viel Gepäck, Kindersitz, Hausnummer schwer zu finden"></textarea>
+          </div>
+        </section>
+
+        <!-- Schritt 5 -->
+        <section class="bk-step" data-step="5" aria-labelledby="t5" hidden>
+          <h1 class="bk-title" id="t5">Alles richtig?</h1>
+          <div class="bk-summary" id="bk-summary"></div>
+          <p class="bk-legal">Mit dem Absenden werden Ihre Angaben zur Bearbeitung der Anfrage übermittelt. Mehr dazu in der <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a>.</p>
+          <p class="bk-error bk-error-send" id="bk-send-error"></p>
+        </section>
+
+        <!-- Erfolg -->
+        <section class="bk-step bk-done" data-step="done" hidden>
+          <div class="bk-check" aria-hidden="true">
+            <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="none" stroke="#c9a54a" stroke-width="2"/><path d="M15 27l7 7 15-16" fill="none" stroke="#15161a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h1 class="bk-title">Danke, Ihre Anfrage ist da.</h1>
+          <p class="bk-done-text">Wir melden uns schnellstmöglich telefonisch bei Ihnen, um die Fahrt zu bestätigen.</p>
+          <a href="index.html" class="bk-btn bk-btn-primary">Zur Startseite</a>
+        </section>
+      </div>
+
+      <footer class="bk-nav" id="bk-nav">
+        <button type="button" class="bk-btn bk-btn-ghost" id="bk-back">Zurück</button>
+        <button type="button" class="bk-btn bk-btn-primary" id="bk-next">Weiter</button>
+      </footer>
+    </form>
+  </main>
+
+  <script src="assets/data/routes.js"></script>
+  <script src="booking.js"></script>
+</body>
+</html>
